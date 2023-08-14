@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  /*box-shadow: 0 0 0 1px red inset;*/
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Outfit", sans-serif;
+}
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --vd-blue-bg: hsl(217, 54%, 11%);
+  --vd-blue-card-bg: hsl(216, 50%, 16%);
+  --vd-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+html,
+body {
+  font-size: 18px;
+  font-family: "Outfit", "sans-serif";
+  background-color: var(--vd-blue-bg);
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 330px;
+  height: 560px;
+  color: white;
+  background-color: var(--vd-blue-card-bg);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.card-image {
+  background-image: url("../assets/images/image-equilibrium.jpg");
+  width: 100%;
+  height: 282px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  border-radius: 10px;
+}
+.card-image {
+  position: relative;
+  background-image: url("../assets/images/image-equilibrium.jpg");
+  width: 100%;
+  height: 282px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 10px;
+  transition: filter 0.3s ease-in-out;
+}
+
+.card-image:hover {
+  filter: brightness(0.8);
+}
+
+.card-image:hover::before {
+  content: "";
+  background-image: url("../assets/images/icon-view.svg"); /* Path to your image */
+  background-size: 40px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px; /* Match the border-radius of your card */
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--white);
+  background-color: hsla(178, 100%, 50%, 0.561);
+}
+
+.card-title {
+  margin: 25px 0;
+  font-size: 1.2em;
+}
+
+.card-title:hover,
+.creator-info p:hover {
+  color: var(--cyan);
+}
+
+.card-image:hover {
+  background-color: var(--cyan);
+}
+
+.card-p-information {
+  opacity: 0.7;
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.nft-information {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center; /* Align vertically centered */
+  justify-content: space-between;
+}
+
+.nft-info-price,
+.nft-info-clock {
+  display: flex;
+  align-items: center; /* Align vertically centered */
+}
+
+.nft-info-price img,
+.nft-info-clock img {
+  width: 20px;
+  height: auto;
+  margin-right: 10px; /* Add some spacing between icon and text */
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.nft-info-price span,
+.nft-info-clock span {
+  color: var(--cyan);
+  font-size: 14px; /* You can adjust the font size as needed */
+}
+.nft-info-clock span {
+  color: var(--soft-blue);
+}
+
+.line {
+  width: 100%;
+  border: solid 1px var(--vd-blue-line);
+  margin: 15px auto;
+}
+
+.creator-info {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 300;
+  font-size: 0.9em;
+}
+
+.creator-img {
+  background-image: url(../assets/images/image-avatar.png);
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  background-size: 40px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: solid 2px white;
+  border-radius: 25px;
+}
+
+.creator-info span {
+  color: var(--soft-blue);
+}
+
+.creator-info p {
+}
